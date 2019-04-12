@@ -1,3 +1,5 @@
+import java.util.*
+
 fun main (args: Array<String>){
     println("Hello, world!")
 
@@ -45,12 +47,135 @@ fun main (args: Array<String>){
     estaJalado(7.0)
     estaJalado(10.0)
 
+    holaMundoAvanzado(2)
+    holaMundo(" Jenny")
+
+
+    val total = sumarDosnNumeros(1,2)  //la palabra numUno y numDos lo pone el editor de texto
+    println(total)
+
+
+    val arregloCumpleanos: Array<Int> = arrayOf(1,2,3,4)
+    val arregloTodo: Array<Any> = arrayOf(1, "Jenny", 10.2, true)
+
+    arregloCumpleanos [0] = 5
+    arregloCumpleanos.set(0, 5)
+    //arregloTodo = arrayOf(1,2,3,4)
+
+    val fecha = Date()
+    fecha.time = 123456
+    fecha.year = 2019
+   // fecha = Date(1996,6,10)
+
+    val notas = arrayListOf(1,2,3,4,5,6)
+    /*
+    notas.forEach {
+        it      ese it representa el elemento del arreglo
+    }
+    */
+
+    notas.forEach { nota ->
+        println(nota)
+
+    }
+
+    //foreach itera el arreglo
+
+    notas.forEachIndexed{indice, nota ->
+        println("Indice: $indice")
+        println("Nota: $nota")
+        //return Unit
+    }
+
+        //a todos los elementos del arreglo sumar 1
+
+    //OPERADOR MAP -< ITERA Y MODIFICA TODO EL ARREGLO
+
+    val notasDos = notas.map { nota ->
+        nota + 1
+    }
+
+
+    notasDos.forEach{
+        println("Notas 2: $it")
+    }
+
+
+    //numeros impares suma uno  y pares suman dos
+
+
+
+        val notasTres = notas.map { nota ->
+            val modulo = nota % 2
+            val esPar = 0
+            when (modulo) {
+                esPar -> {
+                    nota + 1
+                }
+                else -> {
+                    nota + 2
+                }
+            }
+        }
+
+    val respuestaFilter = notas.filter {
+        it < 4
+
+    }
+
+    val respuestaFilter2 = notas.filter {
+        it > 2
+
+    }
+
+    //Filtra el arreglo y luego multiplica *2
+
+    val respuestaFilter3 = notas.filter {
+        it in 2 .. 4
+
+    }.map {
+        it * 2
+    }
+
+    //FILTER -> fILTRA EL ARREGLO
+    //MAP -> MUTAR P CAMBIAR EL ARREGLO
+
+    val novias = arrayListOf(1,2,2.3,4,4,5)
+
+
+    val respuestaNovias:Boolean=novias.any {
+        it == 3
+    }
+
+    println(respuestaNovias) //true
+
+    val tazos = arrayListOf(1,2,3,4,5,6)
+
+        val respuestaTazos = tazos.all{
+            it> 1
+        }
+        println(respuestaTazos) // false
+
+    val valrTazos = tazos.reduce { valorAcumulado, tazo ->
+        valorAcumulado + tazo
+    }
+    println(valrTazos)
 
 
 
 
 
-}
+
+
+
+    }
+
+
+
+
+
+
+
 
 fun estaJalado(nota:Double): Double{
     when (nota){
@@ -68,4 +193,17 @@ fun estaJalado(nota:Double): Double{
         }
     }
     return nota
+}
+
+
+fun holaMundo (mensaje: String):Unit {
+    println("Mensaje: $mensaje.")
+}
+
+fun holaMundoAvanzado (mensaje: Any):Unit {
+    println("Mensaje: $mensaje.")
+}
+
+fun sumarDosnNumeros(numUno: Int, numDos: Int): Int{
+    return numUno + numDos
 }
