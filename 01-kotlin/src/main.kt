@@ -163,7 +163,7 @@ fun main (args: Array<String>){
 
 
 
-
+    val numerito = Numero("1")
 
 
 
@@ -206,4 +206,122 @@ fun holaMundoAvanzado (mensaje: Any):Unit {
 
 fun sumarDosnNumeros(numUno: Int, numDos: Int): Int{
     return numUno + numDos
+}
+
+//Definir una clase
+
+class Usuarios(val cedula:String){
+    public var nombre:String = ""
+    public var apellido:String = ""
+
+    constructor(cedulaM: String, apellido:String) : this(cedulaM){
+
+    }
+}
+
+
+
+
+class usuariokt(var nombre:String, public val apellido: String, private var id:Int ){
+
+
+    init {
+
+    }
+
+    fun hola():String{
+        return this.apellido
+    }
+
+    private fun hola2(){
+
+    }
+
+    protected fun hola3(){
+
+    }
+
+    companion object {
+        //definir métodos y propedades  --> toso esto es estático
+        val gravedad = 9.8
+        fun correr(){
+            println("estoy corriendo en $gravedad")
+        }
+    }
+
+
+    class BaseDeDatos(){
+        companion object {
+            val usuarios = arrayListOf(1,2,3)
+            fun agregarUsuario(usuario:Int){
+                this.usuarios.add(usuario)
+
+            }
+            fun eliminarUsuario(usuario: Int){
+
+            }
+        }
+    }
+
+    fun aa(){
+        usuariokt.gravedad  //propiedad estática -->Java
+        usuariokt.correr()  //metodo estático -->Java
+
+}
+
+
+}
+
+
+
+fun a(){
+    val adrian = usuariokt("a", "b", 3)
+    adrian.nombre="Jenny"
+}
+
+class Numero(var numero:Int){
+    constructor(numeroString:String):this(numeroString.toInt()){
+        println("CONSTRUCTOR")
+    }
+    init {
+        println("INIT")
+        this.numero
+    }
+
+}
+
+
+class A{
+    // a.correr //metodo estático
+    // a.gravedad //propiedad estática
+}
+
+
+open class Numeros(var numero1:Int, var numero2:Int){
+
+}
+class suma( numeroUno:Int,  numeroDos:Int):Numeros(numeroUno, numeroDos){
+
+}
+
+fun cc(){
+    val a = suma(1,2)
+}
+
+
+fun presley(requerido:Int, opcional : Int=1, nulo:usuariokt?){
+
+    if(nulo !=null){
+        nulo.nombre
+    }
+    val nombresito:String =nulo?.nombre.toString()
+    nulo!!.nombre
+
+
+}
+
+fun ccdd(){
+
+    presley(1,nulo = null)
+    //presley(1,1,null)
 }
