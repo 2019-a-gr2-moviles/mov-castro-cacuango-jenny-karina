@@ -191,6 +191,27 @@ fun ingresarMedicina():Medicina{
     return m
 }
 
+fun ingresarMedicina(med: Medicina):Medicina{
+    var m = Medicina()
+    val nombre = JOptionPane.showInputDialog(null, "Nombre del medicamento", med.nombreMedicina)
+    m.nombreMedicina=nombre.toString()
+
+    val codigo = JOptionPane.showInputDialog(null, "Código del medicamento", med.codigoMedicina)
+    m.codigoMedicina=codigo.toString()
+
+    val tipo = JOptionPane.showInputDialog(null, "Tipo de medicamento (Jarabe/Pastillas)", med.tipoMedicina)
+    m.tipoMedicina=tipo.toString()
+
+    val valor = JOptionPane.showInputDialog(null, "Precio del medicamento", med.precio)
+    m.precio=valor.toDouble()
+
+    val cant = JOptionPane.showInputDialog(null, "Cantidad del medicamentos", med.cantidad)
+    m.cantidad=cant.toInt()
+    JOptionPane.showMessageDialog(null, "Medicamento ingresado con éxito")
+
+    return m
+}
+
 fun modificarMedicina(){
     val nombre = JOptionPane.showInputDialog("Nombre del medicamento a modificar")
     var med = Medicina()
@@ -202,7 +223,7 @@ fun modificarMedicina(){
             JOptionPane.showMessageDialog(null, "Error al buscar medicamento")
         }else{
             consultarMedicina(index)
-            med = ingresarMedicina()
+            med = ingresarMedicina(list[index])
 
             list[index] = med
         }
