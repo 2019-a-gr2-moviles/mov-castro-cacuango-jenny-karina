@@ -26,7 +26,7 @@ fun aplicacionFarmacia() {
                 + "\n" + "      3.  Actualizar"
                 + "\n" + "      4.  Eliminar"
                 + "\n\n"+"      0.   Salir"+ "\n")
-
+    if(seleccion !=null){
         var num=seleccion.toInt()
         when(num){
             1->{
@@ -46,6 +46,13 @@ fun aplicacionFarmacia() {
                 System.exit(0)
             }
         }
+
+    }else{
+        JOptionPane.showMessageDialog(null, "GRACIAS POR SU VISITA!!")
+        System.exit(0)
+    }
+
+
 }
 
 fun submenuInsertar(){
