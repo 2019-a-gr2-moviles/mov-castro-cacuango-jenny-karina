@@ -1,0 +1,2 @@
+001,1702552292,Mario,Caza,BioSil,Una cada 12 horas,Vaporex,Cada 8 horas
+2,Sanchez,1712363652,Maria,Tempra,Despues de cada comida
