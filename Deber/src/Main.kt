@@ -4,13 +4,10 @@ import java.util.*
 var medicina = Medicina()
 var receta = Receta()
 
-//val listaReceta: ArrayList<Receta> = ArrayList<Receta>()
-
 val list = arrayListOf<Medicina>()
 val listRe = arrayListOf<Receta>()
 
 fun main(args:Array<String>) {
-
     quemarMedicina()
     quemarReceta()
     aplicacionFarmacia()
@@ -24,9 +21,10 @@ fun aplicacionFarmacia() {
                 + "\n" + "      1.  Ingresar"
                 + "\n" + "      2.  Consultar"
                 + "\n" + "      3.  Actualizar"
-                + "\n" + "      4.  Eliminar"
-                + "\n\n"+"      0.   Salir"+ "\n")
+                + "\n" + "      4.  Eliminar medicamento"
+                + "\n" +"       0.  Salir"+ "\n")
 
+    if(seleccion !=null){
         var num=seleccion.toInt()
         when(num){
             1->{
@@ -39,13 +37,20 @@ fun aplicacionFarmacia() {
                 submenuEditar()
             }
             4->{
-                submenuEliminar()
+                consultarMedicina()
+                eliminarMedicina()
+                consultarMedicina()
+                aplicacionFarmacia()
             }
             0->{
                 JOptionPane.showMessageDialog(null, "GRACIAS POR SU VISITA!!")
                 System.exit(0)
             }
         }
+    }else{
+        JOptionPane.showMessageDialog(null, "GRACIAS POR SU VISITA!!")
+        System.exit(0)
+    }
 }
 
 fun submenuInsertar(){
@@ -54,28 +59,29 @@ fun submenuInsertar(){
         JOptionPane.showInputDialog("INGRESAR" + "\n"
                 + "\n" + "      1.  Medicina"
                 + "\n" + "      2.  Receta"
-                + "\n\n"+"      0.  Regresar al Menú principal"+ "\n")
+                + "\n" + "      0.  Regresar al Menú principal"+ "\n")
 
-    var num=seleccion.toInt()
-    when(num){
-        1->{
-            list.add(ingresarMedicina())
-            consultarMedicina()
-            aplicacionFarmacia()
+    if(seleccion!=null){
+        var num=seleccion.toInt()
+        when(num){
+            1->{
+                list.add(ingresarMedicina())
+                consultarMedicina()
+                aplicacionFarmacia()
+            }
+            2->{
+                listRe.add(ingresarReceta())
+                consultarReceta()
+                aplicacionFarmacia()
+            }
+            0->{
+                JOptionPane.showMessageDialog(null, "Regresando al Menú principal")
+                aplicacionFarmacia()
+            }
         }
-        2->{
-            listRe.add(ingresarReceta())
-            consultarReceta()
-            aplicacionFarmacia()
-
-        }
-        0->{
-            JOptionPane.showMessageDialog(null, "Regresando al Menú principal")
-            aplicacionFarmacia()
-        }
-
+    }else{
+        aplicacionFarmacia()
     }
-
 }
 
 fun submenuConsultar(){
@@ -83,83 +89,59 @@ fun submenuConsultar(){
         JOptionPane.showInputDialog("CONSULTAR"+ "\n"
                 + "\n" + "     1.   Medicina"
                 + "\n" + "     2.   Receta"
-                + "\n\n"+"     0.   Regresar al Menú principal"+ "\n")
+                + "\n" + "     0.   Regresar al Menú principal"+ "\n")
 
-    var num=seleccion.toInt()
-    when(num){
-        1->{
-            consultarMedicina()
-            aplicacionFarmacia()
+    if(seleccion!=null){
+        var num=seleccion.toInt()
+        when(num){
+            1->{
+                consultarMedicina()
+                aplicacionFarmacia()
+            }
+            2->{
+                consultarReceta()
+                aplicacionFarmacia()
+            }
+            0->{
+                JOptionPane.showMessageDialog(null, "Regresando al Menú principal")
+                aplicacionFarmacia()
+            }
         }
-        2->{
-            consultarReceta()
-            aplicacionFarmacia()
-        }
-        0->{
-            JOptionPane.showMessageDialog(null, "Regresando al Menú principal")
-            aplicacionFarmacia()
-        }
+    }else{
+        aplicacionFarmacia()
     }
 }
-
-
-
 
 fun submenuEditar(){
     val seleccion =
         JOptionPane.showInputDialog("EDITAR"+ "\n"
                 + "\n" + "      1.  Medicina"
                 + "\n" + "      2.  Receta"
-                + "\n\n"+"      0.  Regresar al Menú principal"+ "\n")
+                + "\n" + "      0.  Regresar al Menú principal"+ "\n")
 
-    var num=seleccion.toInt()
-    when(num){
-        1->{
-            modificarMedicina()
-            consultarMedicina()
-            aplicacionFarmacia()
+    if (seleccion!=null){
+        var num=seleccion.toInt()
+        when(num){
+            1->{
+                consultarMedicina()
+                modificarMedicina()
+                consultarMedicina()
+                aplicacionFarmacia()
+            }
+            2->{
 
+            }
+            0->{
+                JOptionPane.showMessageDialog(null, "Regresando al Menú principal")
+                aplicacionFarmacia()
+            }
         }
-        2->{
-
-        }
-        0->{
-            JOptionPane.showMessageDialog(null, "Regresando al Menú principal")
-            aplicacionFarmacia()
-
-        }
-
+    }else{
+        aplicacionFarmacia()
     }
-
 }
+//revisar
 
-fun submenuEliminar(){
-    val seleccion =
-        JOptionPane.showInputDialog("ELIMINAR"+ "\n"
-                + "\n" + "      1.  Medicina"
-                + "\n" + "      2.  Receta"
-                + "\n\n"+"      0.  Regresar al Menú principal"+ "\n")
-
-    var num=seleccion.toInt()
-    when(num){
-        1->{
-            consultarMedicina()
-            eliminarMedicina()
-            consultarMedicina()
-            aplicacionFarmacia()
-        }
-        2->{
-
-        }
-        0->{
-            JOptionPane.showMessageDialog(null, "Regresando al Menú principal")
-            aplicacionFarmacia()
-
-        }
-
-    }
-
-}
 
 //------------MEDICINA--------------//
 
@@ -180,6 +162,27 @@ fun ingresarMedicina():Medicina{
     val cant = JOptionPane.showInputDialog("Cantidad del medicamentos")
     m.cantidad=cant.toInt()
     JOptionPane.showMessageDialog(null, "Medicamento ingresado con éxito")
+    return m
+}
+
+
+fun ingreso(med: Medicina):Medicina{
+    var m = Medicina()
+    val nombre = JOptionPane.showInputDialog(null, "Nombre del medicamento", med.nombreMedicina)
+    m.nombreMedicina=nombre.toString()
+
+    val codigo = JOptionPane.showInputDialog(null, "Código del medicamento", med.codigoMedicina)
+    m.codigoMedicina=codigo.toString()
+
+    val tipo = JOptionPane.showInputDialog(null, "Tipo de medicamento (Jarabe/Pastillas)", med.tipoMedicina)
+    m.tipoMedicina=tipo.toString()
+
+    val valor = JOptionPane.showInputDialog(null, "Precio del medicamento", med.precio)
+    m.precio=valor.toDouble()
+
+    val cant = JOptionPane.showInputDialog(null, "Cantidad del medicamentos", med.cantidad)
+    m.cantidad=cant.toInt()
+    JOptionPane.showMessageDialog(null, "Medicamento actualizado")
 
     return m
 }
@@ -195,7 +198,7 @@ fun modificarMedicina(){
             JOptionPane.showMessageDialog(null, "Error al buscar medicamento")
         }else{
             consultarMedicina(index)
-            med = ingresarMedicina()
+            med = ingreso(list[index])
 
             list[index] = med
         }
@@ -248,8 +251,6 @@ fun eliminarMedicina(){
             //println("Eliminado")
         }
     }
-
-
 }
 
 /*---------------Receta------------------*/
