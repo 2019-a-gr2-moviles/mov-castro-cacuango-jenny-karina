@@ -7,7 +7,7 @@ import java.util.*
 class Usuario(var nombre:String,
               var edad:Int,
               var fechaNacimiento: Date,
-              var sueldo:Double):Parcelable {
+              var sueldo:Double):Parcelable{
 
     constructor(parcel: Parcel) : this(
         parcel.readString(),
@@ -20,6 +20,7 @@ class Usuario(var nombre:String,
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(nombre)
         parcel.writeInt(edad)
+        parcel.writeSerializable(fechaNacimiento)
         parcel.writeDouble(sueldo)
     }
 
@@ -38,4 +39,3 @@ class Usuario(var nombre:String,
     }
 
 }
-
