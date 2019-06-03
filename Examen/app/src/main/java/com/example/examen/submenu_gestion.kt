@@ -10,6 +10,7 @@ class submenu_gestion : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_submenu_gestion)
+
         btn_gestAutor.setOnClickListener {
             listaActores()
         }

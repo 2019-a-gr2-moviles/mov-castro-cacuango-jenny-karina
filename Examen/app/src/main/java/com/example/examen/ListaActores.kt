@@ -3,7 +3,10 @@ package com.example.examen
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.annotation.IntegerRes
 import android.support.design.widget.Snackbar
+import android.util.Log
+import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import kotlinx.android.synthetic.main.activity_lista_actores.*
@@ -53,12 +56,12 @@ class ListaActores : AppCompatActivity() {
         }
     }
 
-    private fun infoActor(actorN: Actor) {
+    private fun infoActor(actor: Actor) {
         val intent = Intent(
             this,
             InfoActor::class.java
         )
-        intent.putExtra("actor", actorN)
+        intent.putExtra("actor", actor)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         startActivity(intent)
     }

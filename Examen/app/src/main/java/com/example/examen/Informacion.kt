@@ -1,53 +1,45 @@
 package com.example.examen
 
 import java.lang.StringBuilder
+import java.util.*
+import kotlin.collections.ArrayList
 
 class Informacion {
     companion object {
-        var listActor: ArrayList<Actor> = listActor()
+        var listActor: ArrayList<Actor> = listActorInicial()
         var listaPeliculas: ArrayList<Peliculas> = listPeliculas()
         private var idActor: Int = 0
         private var idPelicula: Int = 0
         var usuario = ""
 
-        fun nuevoActor(): Int {
-            idActor++
-            return (idActor - 1)
-        }
-
-        fun nuevaPelicula(): Int {
-            idPelicula++
-            return (idPelicula - 1)
-        }
-
         fun mensaje(opc: Int): String {
             return when (opc) {
                 0 -> {
-                    return StringBuilder().append(usuario).append("Ha ingresado un nuevo dato.").toString()
+                    return StringBuilder().append(usuario).append(" Ha ingresado un nuevo dato.").toString()
                 }
                 1 -> {
-                    return StringBuilder().append(usuario).append("Ha eliminado uno de los datos").toString()
+                    return StringBuilder().append(usuario).append(" Ha eliminado uno de los datos").toString()
                 }
                 2 -> {
-                    return StringBuilder().append(usuario).append("Ha actualizado información").toString()
+                    return StringBuilder().append(usuario).append(" Ha actualizado información").toString()
                 }
 
                 else -> {
-                    return "Ninguna acción realizada"
+                    return "nada"
                 }
             }
         }
 
-        private fun listActor(): ArrayList<Actor> {
-            val listaActores = arrayListOf<Actor>()
-            listaActores.add(Actor(nuevoActor(),
+        private fun listActorInicial(): ArrayList<Actor> {
+            val list = arrayListOf<Actor>()
+            list.add(Actor(nuevoActor(),
                 "Paul",
                 "Walker",
                 "12/09/1973",
                 8,
                 true,
                 -1))
-            return listaActores
+            return list
         }
 
         private fun listPeliculas(): ArrayList<Peliculas> {
@@ -63,6 +55,14 @@ class Informacion {
             return listaPeliculas
         }
 
+        fun nuevoActor(): Int {
+            idActor++
+            return (idActor - 1)
+        }
 
+        fun nuevaPelicula(): Int {
+            idPelicula++
+            return (idPelicula - 1)
+        }
     }
 }

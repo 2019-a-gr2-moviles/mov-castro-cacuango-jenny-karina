@@ -2,6 +2,7 @@ package com.example.examen
 
 import android.os.Parcel
 import android.os.Parcelable
+import java.util.*
 
 class Peliculas (var identificadorPelicula: Int,
                  var nombrePelicula: String,

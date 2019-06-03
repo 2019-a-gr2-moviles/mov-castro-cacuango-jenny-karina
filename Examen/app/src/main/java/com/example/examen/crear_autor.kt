@@ -1,10 +1,15 @@
 package com.example.examen
 
+import android.content.ComponentName
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.design.widget.Snackbar
 import android.text.Editable
+import android.util.Log
 import kotlinx.android.synthetic.main.activity_crear_autor.*
+import kotlinx.android.synthetic.main.activity_main.*
+import java.text.SimpleDateFormat
 
 class crear_autor : AppCompatActivity() {
 

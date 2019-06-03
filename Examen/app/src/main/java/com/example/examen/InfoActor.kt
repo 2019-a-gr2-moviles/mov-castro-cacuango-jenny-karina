@@ -26,7 +26,7 @@ class InfoActor : AppCompatActivity() {
         }
 
         btn_Actualizar.setOnClickListener {
-            val pacAct = Actor(
+            val actor = Actor(
                 actor.id,
                 txt_nombresActor1.text.toString(),
                 txt_apellidoActor1.text.toString(),
@@ -35,7 +35,7 @@ class InfoActor : AppCompatActivity() {
                 sw_Retirado1.isChecked,
                 2
             )
-            irActores(pacAct)
+            irActores(actor)
         }
     }
 

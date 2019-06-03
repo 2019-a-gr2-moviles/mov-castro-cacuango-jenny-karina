@@ -2,6 +2,7 @@ package com.example.examen
 
 import android.os.Parcel
 import android.os.Parcelable
+import java.lang.StringBuilder
 
 class Actor  (var id: Int,
               var nombreActor: String,

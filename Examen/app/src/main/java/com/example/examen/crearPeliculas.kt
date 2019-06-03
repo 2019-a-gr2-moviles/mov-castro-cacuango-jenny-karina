@@ -12,34 +12,33 @@ class crearPeliculas : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_crear_peliculas)
 
-        var actor: Actor = this.intent.getParcelableExtra<Actor>("actor")
-        Log.i("nuevaPeli", actor.nombreActor)
+        var paciente: Actor = this.intent.getParcelableExtra<Actor>("actor")
+        Log.i("crear-med", paciente.nombreActor)
 
 
         btn_registrar.setOnClickListener {
-            val pelicula: Peliculas = Peliculas(
+            val medicamento: Peliculas = Peliculas(
                 0,
                 txt_nombrePelicula.text.toString(),
                 txt_anioLanzamiento.text.toString().toInt(),
                 txt_rating.text.toString().toInt(),
                 txt_actoresPrincipales.text.toString(),
                 txt_sinopsis.text.toString(),
-                actor.id,
+                paciente.id,
                 0
             )
-            listaPeliculas(pelicula)
+            irListaMedicamento(medicamento)
         }
     }
 
-    private fun listaPeliculas(pelicula: Peliculas) {
+    private fun irListaMedicamento(medicamento: Peliculas) {
         val intent = Intent(
             this,
             listaPeliculas::class.java
         )
-        intent.putExtra("pelicula", pelicula)
+        intent.putExtra("pelicula", medicamento)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         startActivity(intent)
-
     }
 }
 
