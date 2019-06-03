@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Examen ACTOR-PELÍCULA</string>
+    <string name="btn_ingresar" translatable="false">INGRESAR</string>
+    <string name="txt_nombre" translatable="false">Ingrese su nombre</string>
+    <string name="txt_nuevoUsuario" translatable="false">Nombre</string>
+    <string name="btn_gestAutor" translatable="false">Gestionar Actor</string>
+    <string name="btn_crearAutor" translatable="false">Crear Actor</string>
+    <string name="btn_guardar" translatable="false">GUARDAR</string>
+    <string name="txt_nombresActor" translatable="false">Nombre</string>
+    <string name="txt_apellidoActor" translatable="false">Apellido</string>
+    <string name="txt_fechaNacimiento" translatable="false">Fecha de Nacimiento</string>
+    <string name="txt_numPeliculas" translatable="false">Número de Películas</string>
+    <string name="sw_Retirado" translatable="false">Retirado</string>
+
+</resources>

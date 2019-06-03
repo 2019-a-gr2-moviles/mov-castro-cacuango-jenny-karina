@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ACTOR-FILM Exam</string>
+    <string name="btn_ingresar" translatable="false">ENTER</string>
+    <string name="txt_nombre" translatable="false">Enter your name</string>
+    <string name="txt_nuevoUsuario" translatable="false">Name</string>
+    <string name="btn_gestAutor" translatable="false">Manage Actor</string>
+    <string name="btn_crearAutor" translatable="false">Create Actor</string>
+    <string name="btn_guardar" translatable="false">SAVE</string>
+    <string name="txt_nombresActor" translatable="false">Name</string>
+    <string name="txt_apellidoActor" translatable="false">Last Name</string>
+    <string name="txt_fechaNacimiento" translatable="false">Date of Birth</string>
+    <string name="txt_numPeliculas" translatable="false">Number of Movies</string>
+    <string name="sw_Retirado" translatable="false">Retired</string>
+</resources>
