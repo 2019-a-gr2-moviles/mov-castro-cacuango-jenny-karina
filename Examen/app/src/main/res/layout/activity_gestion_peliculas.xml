@@ -7,4 +7,80 @@
         android:layout_height="match_parent"
         tools:context=".gestionPeliculas">
 
+    <EditText
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Name"
+            android:ems="10"
+            tools:layout_editor_absoluteY="121dp" tools:layout_editor_absoluteX="47dp"
+            android:id="@+id/txt_nombrePelicula1" android:hint="@string/txt_nombrePelicula1"/>
+    <EditText
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Name"
+            android:ems="10"
+            tools:layout_editor_absoluteY="223dp" tools:layout_editor_absoluteX="47dp"
+            android:id="@+id/txt_anioLanzamiento1" android:hint="@string/txt_anioLanzamiento1"/>
+    <EditText
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Name"
+            android:ems="10"
+            tools:layout_editor_absoluteY="323dp" tools:layout_editor_absoluteX="47dp" android:id="@+id/txt_rating1"
+            android:hint="@string/txt_rating1"/>
+    <EditText
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Name"
+            android:ems="10"
+            tools:layout_editor_absoluteY="425dp" tools:layout_editor_absoluteX="47dp"
+            android:id="@+id/txt_actoresPrincipales1" android:hint="@string/txt_actoresPrincipales1"/>
+    <EditText
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Name"
+            android:ems="10"
+            tools:layout_editor_absoluteY="525dp" tools:layout_editor_absoluteX="47dp" android:id="@+id/txt_sinopsis1"
+            android:hint="@string/txt_sinopsis1"/>
+    <Button
+            android:text="@string/btn_eliminar1"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content" tools:layout_editor_absoluteY="591dp"
+            tools:layout_editor_absoluteX="28dp" android:id="@+id/btn_eliminar1" android:hint="@string/btn_eliminar1"/>
+    <Button
+            android:text="@string/btn_actualizar1"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content" tools:layout_editor_absoluteY="591dp"
+            tools:layout_editor_absoluteX="210dp" android:id="@+id/btn_actualizar1"
+            android:hint="@string/btn_actualizar1"/>
+    <TextView
+            android:text="Nombre Película"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" tools:layout_editor_absoluteY="94dp"
+            tools:layout_editor_absoluteX="47dp" android:id="@+id/textView5"/>
+    <TextView
+            android:text="Año de Lanzamiento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" tools:layout_editor_absoluteY="187dp"
+            tools:layout_editor_absoluteX="47dp" android:id="@+id/textView6"/>
+    <TextView
+            android:text="Rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" tools:layout_editor_absoluteY="289dp"
+            tools:layout_editor_absoluteX="47dp" android:id="@+id/textView7"/>
+    <TextView
+            android:text="Actores Principales"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" tools:layout_editor_absoluteY="385dp"
+            tools:layout_editor_absoluteX="47dp" android:id="@+id/textView8"/>
+    <TextView
+            android:text="Sinopsis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" tools:layout_editor_absoluteY="482dp"
+            tools:layout_editor_absoluteX="47dp" android:id="@+id/textView9"/>
 </android.support.constraint.ConstraintLayout>

@@ -21,4 +21,22 @@
     <string name="txt_fechaNacimiento1" translatable="false">Fecha de Nacimiento</string>
     <string name="txt_numPeliculas1" translatable="false">Número de Películas</string>
     <string name="sw_Retirado1" translatable="false">Retirado</string>
+    <string name="txt_nombrePelicula" translatable="false">Nombre</string>
+    <string name="txt_anioLanzamiento" translatable="false">Año de Lanzamiento</string>
+    <string name="txt_rating" translatable="false">Clasificación</string>
+    <string name="txt_actoresPrincipales" translatable="false">Actores principales</string>
+    <string name="txt_sinopsis" translatable="false">Sinopsis</string>
+    <string name="btn_registrar" translatable="false">Registrar</string>
+    <string name="txt_nombrePelicula1" translatable="false">Nombre</string>
+    <string name="txt_anioLanzamiento1" translatable="false">Año de Lanzamiento</string>
+    <string name="txt_rating1" translatable="false">Clasificación</string>
+    <string name="txt_actoresPrincipales1" translatable="false">Actores principales</string>
+    <string name="txt_sinopsis1" translatable="false">Sinopsis</string>
+    <string name="btn_eliminar1" translatable="false">Eliminar</string>
+    <string name="btn_actualizar1" translatable="false">Actualizar</string>
+
+
+
+
+
 </resources>
