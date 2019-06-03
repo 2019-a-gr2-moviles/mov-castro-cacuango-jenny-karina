@@ -12,4 +12,13 @@
     <string name="txt_fechaNacimiento" translatable="false">Fecha de Nacimiento</string>
     <string name="txt_numPeliculas" translatable="false">Número de Películas</string>
     <string name="sw_Retirado" translatable="false">Retirado</string>
+    <string name="btn_Eliminar" translatable="false">ELIMINAR</string>
+    <string name="btn_Actualizar" translatable="false">ACTUALIZAR</string>
+    <string name="btn_gestionarPeliculas" translatable="false">GESTIONAR PELÍCULAS</string>
+    <string name="btn_crearPeliculas" translatable="false">CREAR PELÍCULAS</string>
+    <string name="txt_nombresActor1" translatable="false">Nombre</string>
+    <string name="txt_apellidoActor1" translatable="false">Apellido</string>
+    <string name="txt_fechaNacimiento1" translatable="false">Fecha de Nacimiento</string>
+    <string name="txt_numPeliculas1" translatable="false">Número de Películas</string>
+    <string name="sw_Retirado1" translatable="false">Retirado</string>
 </resources>

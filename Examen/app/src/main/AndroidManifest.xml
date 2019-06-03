@@ -9,6 +9,16 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".crearPeliculas">
+        </activity>
+        <activity android:name=".gestionPeliculas">
+        </activity>
+        <activity android:name=".listaPeliculas">
+        </activity>
+        <activity android:name=".InfoActor">
+        </activity>
+        <activity android:name=".InfoActores">
+        </activity>
         <activity android:name=".ListaActores">
         </activity>
         <activity android:name=".crear_autor">

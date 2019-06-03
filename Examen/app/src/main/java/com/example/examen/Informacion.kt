@@ -4,8 +4,8 @@ import java.lang.StringBuilder
 
 class Informacion {
     companion object {
-        var listaPacientes: ArrayList<Actor> = listActor()
-        var listaMedicamentos: ArrayList<Peliculas> = listPeliculas()
+        var listActor: ArrayList<Actor> = listActor()
+        var listaPeliculas: ArrayList<Peliculas> = listPeliculas()
         private var idActor: Int = 0
         private var idPelicula: Int = 0
         var usuario = ""
