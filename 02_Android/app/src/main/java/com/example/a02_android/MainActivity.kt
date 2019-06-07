@@ -41,5 +41,13 @@ class MainActivity : AppCompatActivity() {
         startActivity(intentExplicito)
     }
 
+    fun irArecyclerView(){
+        val intentExplicito = Intent(
+            this,
+            ReciclerViewActivity::class.java
+        )
+        startActivity(intentExplicito)
+    }
+
 
 }

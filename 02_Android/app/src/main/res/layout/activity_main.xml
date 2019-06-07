@@ -37,5 +37,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" tools:layout_editor_absoluteY="492dp"
             tools:layout_editor_absoluteX="171dp" android:id="@+id/button2"/>
+    <Button
+            android:text="Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_recicler_view"
+            app:layout_constraintTop_toTopOf="@+id/btn_parcelable"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_parcelable"
+            app:layout_constraintEnd_toStartOf="@+id/btn_parcelable" android:layout_marginEnd="28dp"
+            android:layout_marginRight="28dp" app:layout_constraintVertical_bias="0.0"/>
 
 </android.support.constraint.ConstraintLayout>
