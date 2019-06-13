@@ -15,6 +15,8 @@ class MainActivity : AppCompatActivity() {
             irAParcelable()
         }
         btn_adapter.setOnClickListener{irAListView()}
+        btn_recicler_view.setOnClickListener { irArecyclerView() }
+        btn_respuesta.setOnClickListener { irAIntentRespuesta() }
     }
 
     fun irAParcelable(){
@@ -48,6 +50,16 @@ class MainActivity : AppCompatActivity() {
         )
         startActivity(intentExplicito)
     }
+
+    fun irAIntentRespuesta(){
+        val intentExplicito = Intent(
+            this,
+            IntentRespuestaActivity::class.java
+        )
+        startActivity(intentExplicito)
+    }
+
+
 
 
 }
