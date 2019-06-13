@@ -11,35 +11,76 @@ import android.widget.TextView
 import com.example.a02_android.Persona
 import com.example.a02_android.R
 import com.example.a02_android.ReciclerViewActivity
-import kotlinx.android.synthetic.main.layout.*
 
 class AdaptadorPersona(
     private val listaPersonas: List<Persona>,
     private val contexto: ReciclerViewActivity,
     private val recyclerView: RecyclerView
 ) :
-
-
     RecyclerView.Adapter<AdaptadorPersona.MyViewHolder>() {
 
+    inner class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+
+        var nombreTextView: TextView
+        var cedulaTextView: TextView
+        var accionBoton: Button
+
+        init {
+            nombreTextView = view.findViewById(R.id.txt_nombre) as TextView
+            cedulaTextView = view.findViewById(R.id.txt_cedula) as TextView
+            accionBoton = view.findViewById(R.id.btn_accion) as Button
+
+            val layout = view.findViewById(R.id.linear_layout) as LinearLayout
+
+            layout
+                .setOnClickListener {
+
+                    Log.i("recycler-view", "Layout presionado")
+
+                }
+
+            accionBoton.setOnClickListener {
+                nombreTextView.text = "ME CAMBIAROOOOOOON!!! "
+
+                contexto.cambiarNBombreTextView("WOW!")
+
+                val nuevasPersonas = arrayListOf<Persona>()
+
+                nuevasPersonas.add(Persona("Felipe", "1091231239"))
+                nuevasPersonas.add(Persona("Rafael", "0192929273"))
+                nuevasPersonas.add(Persona("Nydia", "18293041822"))
+
+                contexto.iniciarRecylerView(nuevasPersonas, contexto, recyclerView)
+
+            }
+        }
+
+    }
+
+    // Devuelve el # de items de la lista
     override fun getItemCount(): Int {
-        //regresa cuantos item se tiene en la lista
         return listaPersonas.size
     }
 
-    override fun onBindViewHolder(myViewHolder: AdaptadorPersona.MyViewHolder, position: Int) {
-        //sacar a la persona por la posición
+    override fun onBindViewHolder(
+        myViewHolder: AdaptadorPersona.MyViewHolder,
+        position: Int
+    ) {
+
         val persona = listaPersonas[position]
-        myViewHolder.nombreTextureView.text=persona.nombre
-        myViewHolder.cedulaTextureView.text=persona.cedula
+
+        myViewHolder.nombreTextView.text = persona.nombre
+        myViewHolder.cedulaTextView.text = persona.cedula
 
     }
 
+    // Esta funcion define el template que vamos a utilizar
+    // El template esta en la carpeta de res/layout
     override fun onCreateViewHolder(
         p0: ViewGroup,
-        p1: Int):
+        p1: Int
+    ):
             AdaptadorPersona.MyViewHolder {
-
         val itemView = LayoutInflater
             .from(p0.context)
             .inflate(
@@ -49,32 +90,7 @@ class AdaptadorPersona(
             )
 
         return MyViewHolder(itemView)
-
     }
 
-    inner class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
-        //constructor primario
-        var nombreTextureView:TextView
-        var cedulaTextureView:TextView
-        var accionBoton:Button
-
-        init {
-            nombreTextureView=view.findViewById(R.id.txt_nombre) as TextView
-            cedulaTextureView=view.findViewById(R.id.txt_nombre) as TextView
-            accionBoton=view.findViewById(R.id.btn_accion) as Button
-
-            val layout = view.findViewById(R.id.linear_layout) as LinearLayout
-
-            layout
-                .setOnClickListener {
-
-                    Log.i("recycler-view","Layout presionado")
-
-                }
-
-            accionBoton.setOnClickListener { nombreTextureView.text="ME CAMBIAROON !!"}
-        }
-
-    }
 }
