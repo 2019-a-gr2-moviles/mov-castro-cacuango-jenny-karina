@@ -13,22 +13,25 @@ class ResultadoPropioActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_resultado_propio)
 
-        btn_devolver_respuesta.setOnClickListener { devolverRespuesta() }
+        btn_devolver_respuesta.setOnClickListener {
+            devolverRespuesta()
+        }
     }
 
     fun devolverRespuesta(){
         val nombre = "Jenny"
-        val edad = 22
+        val edad = 10
 
         val intentRespuesta = Intent()
 
-        intentRespuesta.putExtra("Nombre de Usuario", nombre)
-        intentRespuesta.putExtra("Edad Usuario", edad)
+        intentRespuesta.putExtra("nombreUsuario", nombre)
+        intentRespuesta.putExtra("edadUsuario", edad)
 
         this.setResult(
             RESULT_OK, //Podemos enviar RESULT_OK o RESULT_CANCELED
             intentRespuesta
         )
+        this.finish()
 
     }
 }
