@@ -5,10 +5,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.LinearLayout
-import android.widget.RelativeLayout
-import android.widget.TextView
+import android.widget.*
 
 class AdaptadorMensaje (
     private val listaMensaje: List<Parcelable>,
@@ -22,11 +19,14 @@ class AdaptadorMensaje (
         var descriptionTextView: TextView
         var anuncioTextView: TextView
         var idUsuario: Int =0
+        var imgFoto:ImageView
 
         init {
+            imgFoto=view.findViewById(R.id.img_foto) as ImageView
             nombreTextView = view.findViewById(R.id.txt_nombre) as TextView
             descriptionTextView = view.findViewById(R.id.txt_description) as TextView
-            anuncioTextView = view.findViewById(R.id.txt_anuncio) as TextView
+            anuncioTextView = view.findViewById(R.id.txt_chat) as TextView
+
 
             val layout = view.findViewById(R.id.RelativeLayout) as RelativeLayout
 
@@ -43,9 +43,7 @@ class AdaptadorMensaje (
         fun irAVerMensajeActivity(mensaje:Parcelable){
             contexto.irAVerMensajeActivity(mensaje)
         }
-
-
-        }
+    }
 
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): MyViewHolder {
         val itemView = LayoutInflater
@@ -55,15 +53,12 @@ class AdaptadorMensaje (
                 p0,
                 false
             )
-
         return MyViewHolder(itemView)
-
     }
 
     override fun getItemCount(): Int {
 
         return listaMensaje.size
-
     }
 
     override fun onBindViewHolder(myViewHolder: AdaptadorMensaje.MyViewHolder, position: Int) {
@@ -75,8 +70,15 @@ class AdaptadorMensaje (
         myViewHolder.anuncioTextView.text = mensaje.anuncio
         myViewHolder.idUsuario = mensaje.id_usuario
 
+        when (mensaje.id_usuario) {
+            1 -> {
+                myViewHolder.imgFoto.setImageResource(R.mipmap.icon1)
+            }
+            2 -> {
+                myViewHolder.imgFoto.setImageResource(R.mipmap.icon2)
+            }
+        }
 
     }
-
 }
 

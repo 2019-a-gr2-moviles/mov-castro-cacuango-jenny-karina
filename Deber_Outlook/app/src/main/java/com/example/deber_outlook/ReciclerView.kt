@@ -16,67 +16,81 @@ class ReciclerView : AppCompatActivity() {
 
         var listaInicio = arrayListOf<Parcelable>()
 
-        listaInicio.add(
-            Parcelable(
-            "CEC-EPN",
-            "CEC-EPN descuentos para graduados",
-            "Dudas o inconvenientes, contáctenos",
-            1)
-        )
+        for(num in 1..10) {
 
-        listaInicio.add(Parcelable(
-            "CEC-EPN",
-            "CEC-EPN descuentos para graduados",
-            "Dudas o inconvenientes, contáctenos",
-            2))
+            var add = Parcelable(
+                    "CEC-EPN",
+                    "CEC-EPN descuentos para graduados",
+                    "Dudas o inconvenientes, contáctenos en ...",
+                    1)
 
-        listaInicio.add(Parcelable(
-            "CEC-EPN",
-            "CEC-EPN descuentos para graduados",
-            "Dudas o inconvenientes, contáctenos",
-            3))
+            var addNew = Parcelable(
+                "FACEBOOK",
+                "Un amigo quiere que indiques que te gusta",
+                "Juan Valdiviezo te invitó a que indiques que...",
+                2)
 
-        listaInicio.add(Parcelable(
-            "CEC-EPN",
-            "CEC-EPN descuentos para graduados",
-            "Dudas o inconvenientes, contáctenos",
-            4))
+            listaInicio.add(add)
+            listaInicio.add(addNew)
+        }
 
-        listaInicio.add(Parcelable(
-            "CEC-EPN",
-            "CEC-EPN descuentos para graduados",
-            "Dudas o inconvenientes, contáctenos",
-            5))
 
-        listaInicio.add(Parcelable(
-            "CEC-EPN",
-            "CEC-EPN descuentos para graduados",
-            "Dudas o inconvenientes, contáctenos",
-            6))
 
-        listaInicio.add(Parcelable(
-            "CEC-EPN",
-            "CEC-EPN descuentos para graduados",
-            "Dudas o inconvenientes, contáctenos",
-            7))
 
-        listaInicio.add(Parcelable(
-            "CEC-EPN",
-            "CEC-EPN descuentos para graduados",
-            "Dudas o inconvenientes, contáctenos",
-            8))
 
-        listaInicio.add(Parcelable(
-            "CEC-EPN",
-            "CEC-EPN descuentos para graduados",
-            "Dudas o inconvenientes, contáctenos",
-            9))
-
-        listaInicio.add(Parcelable(
-            "CEC-EPN",
-            "CEC-EPN descuentos para graduados",
-            "Dudas o inconvenientes, contáctenos",
-            10))
+//        listaInicio.add(Parcelable(
+//            "CEC-EPN",
+//            "CEC-EPN descuentos para graduados",
+//            "Dudas o inconvenientes, contáctenos",
+//            2))
+//
+//        listaInicio.add(Parcelable(
+//            "CEC-EPN",
+//            "CEC-EPN descuentos para graduados",
+//            "Dudas o inconvenientes, contáctenos",
+//            3))
+//
+//        listaInicio.add(Parcelable(
+//            "CEC-EPN",
+//            "CEC-EPN descuentos para graduados",
+//            "Dudas o inconvenientes, contáctenos",
+//            4))
+//
+//        listaInicio.add(Parcelable(
+//            "CEC-EPN",
+//            "CEC-EPN descuentos para graduados",
+//            "Dudas o inconvenientes, contáctenos",
+//            5))
+//
+//        listaInicio.add(Parcelable(
+//            "CEC-EPN",
+//            "CEC-EPN descuentos para graduados",
+//            "Dudas o inconvenientes, contáctenos",
+//            6))
+//
+//        listaInicio.add(Parcelable(
+//            "CEC-EPN",
+//            "CEC-EPN descuentos para graduados",
+//            "Dudas o inconvenientes, contáctenos",
+//            7))
+//
+//        listaInicio.add(Parcelable(
+//            "CEC-EPN",
+//            "CEC-EPN descuentos para graduados",
+//            "Dudas o inconvenientes, contáctenos",
+//            8))
+//
+//        listaInicio.add(Parcelable(
+//            "CEC-EPN",
+//            "CEC-EPN descuentos para graduados",
+//            "Dudas o inconvenientes, contáctenos",
+//            9))
+//
+//        listaInicio.add(Parcelable(
+//            "CEC-EPN",
+//            "CEC-EPN descuentos para graduados",
+//            "Dudas o inconvenientes, contáctenos",
+//            10))
 
 
         iniciarRecylerView(listaInicio, this,rv_mensaje)
