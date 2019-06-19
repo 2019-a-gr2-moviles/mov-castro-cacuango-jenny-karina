@@ -30,16 +30,19 @@ class AdaptadorMensaje (
 
             val layout = view.findViewById(R.id.RelativeLayout) as RelativeLayout
 
-            layout
-                .setOnClickListener {
+            layout.setOnClickListener {
+                val mensaje =Parcelable(nombreTextView.text.toString(),
+                    descriptionTextView.text.toString(),
+                    anuncioTextView.text.toString(),
+                    idUsuario)
+                irAVerMensajeActivity(mensaje)
 
-                    Log.i("recycler-view", "Layout presionado")
-
-                }
-
-
+                    Log.i("recycler-view", "Layout presionado") }
 
             }
+        fun irAVerMensajeActivity(mensaje:Parcelable){
+            contexto.irAVerMensajeActivity(mensaje)
+        }
 
 
         }

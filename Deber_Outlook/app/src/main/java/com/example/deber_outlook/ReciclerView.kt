@@ -99,17 +99,14 @@ class ReciclerView : AppCompatActivity() {
         adaptadorMensaje.notifyDataSetChanged()
     }
 
-//    fun irAChatAcivity(mensaje: Mensaje){
-//        val intentExplicito = Intent(
-//            this,
-//            ChatActivity::class.java
-//        )
-//
-//
-//        intentExplicito.putExtra("mensaje",mensaje)
-//        startActivity(intentExplicito)
-//
-//
-//    }
+    fun irAVerMensajeActivity(mensaje: Parcelable){
+        val intentExplicito = Intent(
+            this,
+            VerMensaje::class.java
+        )
+
+        intentExplicito.putExtra("mensaje",mensaje)
+        startActivity(intentExplicito)
+    }
 
 }
