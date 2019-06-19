@@ -14,9 +14,12 @@ class MainActivity : AppCompatActivity() {
         btn_parcelable.setOnClickListener{
             irAParcelable()
         }
-        btn_adapter.setOnClickListener{irAListView()}
-        btn_recicler_view.setOnClickListener { irArecyclerView() }
-        btn_respuesta.setOnClickListener { irAIntentRespuesta() }
+        btn_adapter.setOnClickListener{
+            irAListView()}
+        btn_recicler_view.setOnClickListener {
+            irArecyclerView() }
+        btn_respuesta.setOnClickListener {
+            irAIntentRespuesta() }
     }
 
     fun irAParcelable(){

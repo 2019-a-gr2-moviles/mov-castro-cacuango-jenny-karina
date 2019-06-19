@@ -15,7 +15,7 @@ class IntentRespuestaActivity : AppCompatActivity() {
         setContentView(R.layout.activity_intent_respuesta)
 
         btn_enviar_intent_respuesta.setOnClickListener { enviarIntentConRespuesta() }
-        btn_enviar_intent_respuesta.setOnClickListener { enviarIntentConRespuestaPropia() }
+        btn_enviar_respuesta_propia.setOnClickListener { enviarIntentConRespuestaPropia() }
     }
 
     fun enviarIntentConRespuestaPropia(){
@@ -61,16 +61,16 @@ class IntentRespuestaActivity : AppCompatActivity() {
                         )
 
                         val telefono = cursor?.getString(indiceTelefono!!)
+                        cursor?.close()
 
                         Log.i("intent-respuesta","El telefono es: $telefono")
                     }
 
                     305->{
-                        val nombre = data?.getStringExtra("NOMBRE USUARIO")
-                        val edad = data?.getIntExtra("edad Usuario", 22)
+                        val nombre = data?.getStringExtra("nombreUsuario")
+                        val edad = data?.getIntExtra("edadUsuario", 0)
                         Log.i("intent-respuesta", "Nombre: $nombre Edad: $edad")
                     }
-
                 }
             }
 
