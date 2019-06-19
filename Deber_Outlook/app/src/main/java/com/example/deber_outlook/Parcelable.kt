@@ -3,12 +3,20 @@ package com.example.deber_outlook
 import android.os.Parcel
 import android.os.Parcelable
 
-class Parcelable (var autor: String, var mensaje:String, var anuncio: String, var id_usuario: Int ): Parcelable {
+class Parcelable (
+    var autor: String,
+    var mensaje:String,
+    var anuncio: String,
+    var id_usuario: Int,
+    var cabecera:String,
+    var recibir:String ): Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readString(),
         parcel.readString(),
         parcel.readString(),
-        parcel.readInt()
+        parcel.readInt(),
+        parcel.readString(),
+        parcel.readString()
     ) {
     }
 
@@ -17,6 +25,8 @@ class Parcelable (var autor: String, var mensaje:String, var anuncio: String, va
         parcel.writeString(mensaje)
         parcel.writeString(anuncio)
         parcel.writeInt(id_usuario)
+        parcel.writeString(cabecera)
+        parcel.writeString(recibir)
     }
 
     override fun describeContents(): Int {

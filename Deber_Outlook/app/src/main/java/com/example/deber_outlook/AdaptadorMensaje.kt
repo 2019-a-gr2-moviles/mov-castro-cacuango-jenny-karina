@@ -20,6 +20,8 @@ class AdaptadorMensaje (
         var anuncioTextView: TextView
         var idUsuario: Int =0
         var imgFoto:ImageView
+        var cabeceraTextView: String = ""
+        var contenidoTextView: String = ""
 
         init {
             imgFoto=view.findViewById(R.id.img_foto) as ImageView
@@ -34,7 +36,11 @@ class AdaptadorMensaje (
                 val mensaje =Parcelable(nombreTextView.text.toString(),
                     descriptionTextView.text.toString(),
                     anuncioTextView.text.toString(),
-                    idUsuario)
+                    idUsuario,
+                    cabeceraTextView,
+                    contenidoTextView
+
+                )
                 irAVerMensajeActivity(mensaje)
 
                     Log.i("recycler-view", "Layout presionado") }
@@ -69,6 +75,9 @@ class AdaptadorMensaje (
         myViewHolder.descriptionTextView.text = mensaje.mensaje
         myViewHolder.anuncioTextView.text = mensaje.anuncio
         myViewHolder.idUsuario = mensaje.id_usuario
+        myViewHolder.cabeceraTextView=mensaje.cabecera
+        myViewHolder.contenidoTextView=mensaje.recibir
+
 
         when (mensaje.id_usuario) {
             1 -> {

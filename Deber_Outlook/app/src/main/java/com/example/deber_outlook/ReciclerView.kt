@@ -22,13 +22,19 @@ class ReciclerView : AppCompatActivity() {
                     "CEC-EPN",
                     "CEC-EPN descuentos para graduados",
                     "Dudas o inconvenientes, contáctenos en ...",
-                    1)
+                    1,
+                    "CEC-EPN descuentos para graduados",
+                    "para jennyk-castro@hotmail.com"
+            )
 
             var addNew = Parcelable(
                 "FACEBOOK",
                 "Un amigo quiere que indiques que te gusta",
                 "Juan Valdiviezo te invitó a que indiques que...",
-                2)
+                2,
+                "Un amigo quiere que indiques que te gusta una página en Facebook",
+                "para Jenny Castro"
+                )
 
             listaInicio.add(add)
             listaInicio.add(addNew)
