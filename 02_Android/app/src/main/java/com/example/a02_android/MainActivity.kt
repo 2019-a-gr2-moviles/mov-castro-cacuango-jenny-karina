@@ -62,6 +62,14 @@ class MainActivity : AppCompatActivity() {
         startActivity(intentExplicito)
     }
 
+    //Para enviar un correo
+//    val addressees = arrayOf("direccion@unocom", "direccion@dos.com")
+//    val intent = Intent(Intent.ACTION_SEND)
+//    intent.type = "text/html"
+//    intent.putExtra(Intent.EXTRA_EMAIL, addressees)
+//    intent.putExtra(Intent.EXTRA_SUBJECT, "Sujeto")
+//    intent.putExtra(Intent.EXTRA_TEXT, "Texto.")
+//    startActivity(intent)
 
 
 
