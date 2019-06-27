@@ -11,6 +11,7 @@ module.exports = {
     nombreAtributo: {
       type:'string'
     },
+
     nombre: {
       type: 'string',
       required: true,
@@ -48,6 +49,7 @@ module.exports = {
     longitudCasa: {
       type: 'string'
     },
+    
     tipoUsuario: {
       type: 'string',
       enum: ['normal', 'pendiente', 'premium']
@@ -58,14 +60,17 @@ module.exports = {
     },
 
     //CONFIGURAIÓN DEL PAPÁ
+    //Campo que van a tener todos los servicios
   serviciosDeUsuario:{ //nombre atributo de la relación
     collection: 'servicio',  //nombre del modelo a relacionar
     via: 'fkUsuario' //nombre del atributo fk del otro moodelo
+                    //campo para hacer la relación
   },
 
-  fkEmpresa:{
-    model: 'empresa'
-  }
+  fkEmpresa: {  // Nombre del FK para la relacion
+    model: 'empresa', // Nombre del modelo a relacionar (papa)
+    // required: true // OPCIONAL -> Siempre ingresar el FK
+  },
 
   
   },
