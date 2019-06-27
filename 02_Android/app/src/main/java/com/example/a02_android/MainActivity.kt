@@ -20,6 +20,10 @@ class MainActivity : AppCompatActivity() {
             irArecyclerView() }
         btn_respuesta.setOnClickListener {
             irAIntentRespuesta() }
+
+        btn_http.setOnClickListener {
+            irAConexionHttp()
+        }
     }
 
     fun irAParcelable(){
@@ -61,6 +65,17 @@ class MainActivity : AppCompatActivity() {
         )
         startActivity(intentExplicito)
     }
+
+    fun irAConexionHttp(){
+        val intentExplicito = Intent(
+            this,
+            ConexionHttpActivity::class.java
+        )
+        startActivity(intentExplicito)
+    }
+
+
+
 
     //Para enviar un correo
 //    val addressees = arrayOf("direccion@unocom", "direccion@dos.com")

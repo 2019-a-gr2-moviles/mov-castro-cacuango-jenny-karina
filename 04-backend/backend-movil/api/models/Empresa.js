@@ -8,13 +8,14 @@
 module.exports = {
 
   attributes: {
-    nombreEmpresa:{
+    nombre:{
       type: 'string'
     },
-    empresaDeUsuario:{ //nombre atributo de la relación
-      collection: 'usuario',  //nombre del modelo a relacionar
-      via: 'fkEmpresa' //nombre del atributo fk del otro moodelo
-    },
+
+    usuariosDeEmpresa: { // Nombre atributo de la relacion
+      collection: 'usuario', // Nombre del modelo a relacionar
+      via: 'fkEmpresa'  // Nombre atributo FK del otro modelo
+    }
     
 
   },

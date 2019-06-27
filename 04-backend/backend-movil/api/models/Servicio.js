@@ -12,11 +12,14 @@ module.exports = {
     nombre:{
       type:'string'
     },
+
+
     //CONFIGURACIÓN DEL HIJO  
-    fkUsuario:{//nombre del fk para la rrelación
+    fkUsuario:{//nombre del fk para la relación
       model: 'usuario' //Nombre del modelo a relacionae (papá)
       //require: true //OPCIONAL ->Siempre infresar el fk
     }
+    
   },
 
 };
