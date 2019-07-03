@@ -60,9 +60,7 @@ class ConexionHttpActivity : AppCompatActivity() {
                     Log.i("http",
                         "FK ${it.fkEmpresa}")
                 }
-
-
-            }
+                            }
         } catch (e:Exception){
             Log.i("http","${e.message}")
             Log.i("http",

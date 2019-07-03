@@ -9,7 +9,8 @@ module.exports = {
 
   attributes: {
     nombre:{
-      type: 'string'
+      type: 'string',
+      
     },
 
     usuariosDeEmpresa: { // Nombre atributo de la relacion
