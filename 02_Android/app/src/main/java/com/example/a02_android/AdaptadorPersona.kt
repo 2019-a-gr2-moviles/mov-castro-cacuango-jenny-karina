@@ -1,6 +1,6 @@
 package com.example.myapplication
 
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -15,11 +15,11 @@ import com.example.a02_android.ReciclerViewActivity
 class AdaptadorPersona(
     private val listaPersonas: List<Persona>,
     private val contexto: ReciclerViewActivity,
-    private val recyclerView: RecyclerView
+    private val recyclerView: androidx.recyclerview.widget.RecyclerView
 ) :
-    RecyclerView.Adapter<AdaptadorPersona.MyViewHolder>() {
+    androidx.recyclerview.widget.RecyclerView.Adapter<AdaptadorPersona.MyViewHolder>() {
 
-    inner class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    inner class MyViewHolder(view: View) : androidx.recyclerview.widget.RecyclerView.ViewHolder(view) {
 
         var nombreTextView: TextView
         var cedulaTextView: TextView

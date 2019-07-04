@@ -1,7 +1,7 @@
 package com.example.a02_android
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
@@ -24,6 +24,8 @@ class MainActivity : AppCompatActivity() {
         btn_http.setOnClickListener {
             irAConexionHttp()
         }
+        btn_mapa.setOnClickListener {
+            irAMapa() }
     }
 
     fun irAParcelable(){
@@ -31,6 +33,7 @@ class MainActivity : AppCompatActivity() {
             this,
             Parcelable::class.java
         )
+
 
         val jenny=Usuario("Jenny",
             22,
@@ -73,6 +76,16 @@ class MainActivity : AppCompatActivity() {
         )
         startActivity(intentExplicito)
     }
+
+    fun irAMapa(){
+        val intentExplicito = Intent(
+            this,
+            MapsActivity::class.java
+        )
+        startActivity(intentExplicito)
+    }
+
+
 
 
 
