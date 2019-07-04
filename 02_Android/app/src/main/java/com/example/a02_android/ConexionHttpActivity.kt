@@ -1,6 +1,6 @@
 package com.example.a02_android
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import com.beust.klaxon.Klaxon
@@ -8,6 +8,7 @@ import java.lang.Exception
 import java.util.*
 import com.github.kittinunf.result.Result.*
 import com.github.kittinunf.fuel.httpGet
+import com.github.kittinunf.fuel.httpPost
 
 class ConexionHttpActivity : AppCompatActivity() {
 
@@ -68,7 +69,7 @@ class ConexionHttpActivity : AppCompatActivity() {
         }
 
 
-        val url = "http://172.29.66.3:1337/empresa/1"
+        val url = "http://172.29.65.66:1337/empresa/1"
         url
             .httpGet()
             .responseString { request, response, result ->
@@ -91,6 +92,33 @@ class ConexionHttpActivity : AppCompatActivity() {
                     }
                 }
             }
+
+        val urlCrearEmpresa= "http://172.29.65.66:1337/empresa"
+
+        val parametrosCrearEmpresa = listOf(
+            "nombre" to "Movistar"
+//            "apellido" to "Porta",
+//            "sueldo" to 130.10,
+//            "hijos" to false
+        )
+
+        urlCrearEmpresa.httpPost(parametrosCrearEmpresa).responseString{
+            request, response, result ->
+            when (result){
+                is Failure->{
+                    val error = result.getException()
+                    Log.i("http", "Error: $error")
+
+                }
+                is Success->{
+                    val empresaString = result.get()
+                    Log.i("http", "$empresaString")
+                }
+            }
+        }
+
+
+
 
     }
 
