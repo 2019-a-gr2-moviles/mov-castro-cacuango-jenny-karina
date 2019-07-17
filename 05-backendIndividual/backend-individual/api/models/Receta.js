@@ -22,9 +22,8 @@ module.exports = {
     },
 
     identificacion: {
-      type: 'string',
+      type: 'number',
       required: true,
-      maxLength: 10,
       unique: true
 
     },
