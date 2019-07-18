@@ -26,6 +26,12 @@ class MainActivity : AppCompatActivity() {
         }
         btn_mapa.setOnClickListener {
             irAMapa() }
+
+        btn_cicloVida.setOnClickListener {
+            irCicloVida() }
+
+        btn_fragment.setOnClickListener {
+            irAFragment() }
     }
 
     fun irAParcelable(){
@@ -81,6 +87,21 @@ class MainActivity : AppCompatActivity() {
         val intentExplicito = Intent(
             this,
             MapsActivity::class.java
+        )
+        startActivity(intentExplicito)
+    }
+    fun irCicloVida(){
+        val intentExplicito = Intent(
+            this,
+            CicloDeVida::class.java
+        )
+        startActivity(intentExplicito)
+    }
+
+    fun irAFragment(){
+        val intentExplicito = Intent(
+            this,
+            FragmentosActivity::class.java
         )
         startActivity(intentExplicito)
     }
