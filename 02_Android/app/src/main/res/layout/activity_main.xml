@@ -69,7 +69,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btn_mapa" app:layout_constraintEnd_toEndOf="@+id/button2"
-            app:layout_constraintStart_toStartOf="@+id/button2" android:layout_marginTop="60dp"
+            app:layout_constraintStart_toStartOf="@+id/button2" android:layout_marginTop="44dp"
             app:layout_constraintTop_toBottomOf="@+id/button2" app:layout_constraintHorizontal_bias="0.0"/>
+    <Button
+            android:text="Ciclo de Vida"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_cicloVida" app:layout_constraintEnd_toEndOf="@+id/btn_http"
+            app:layout_constraintStart_toStartOf="@+id/btn_http" android:layout_marginTop="44dp"
+            app:layout_constraintTop_toBottomOf="@+id/btn_http" app:layout_constraintHorizontal_bias="1.0"/>
+    <Button
+            android:text="Fragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_fragment" app:layout_constraintEnd_toEndOf="@+id/btn_respuesta"
+            app:layout_constraintStart_toStartOf="@+id/btn_respuesta" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" android:layout_marginTop="44dp"
+            app:layout_constraintTop_toBottomOf="@+id/btn_respuesta" app:layout_constraintHorizontal_bias="0.0"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
