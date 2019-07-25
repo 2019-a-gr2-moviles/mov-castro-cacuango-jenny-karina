@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="wrap_content" android:id="@+id/layout_disponibles">
+    <TextView
+            android:text="TextView"
+            android:layout_width="85dp"
+            android:layout_height="32dp"
+            android:id="@+id/txtd_nombreMedicina" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="102dp"
+            android:layout_height="32dp"
+            android:id="@+id/txtd_tipoMedicina" app:layout_constraintStart_toEndOf="@+id/txtd_nombreMedicina"
+            app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="78dp"
+            android:layout_height="32dp"
+            android:id="@+id/txtd_precioMedicina" app:layout_constraintStart_toEndOf="@+id/txtd_tipoMedicina"
+            app:layout_constraintTop_toTopOf="parent"/>
+    <ImageButton
+            android:layout_width="54dp"
+            android:layout_height="32dp" app:srcCompat="@drawable/select"
+            app:layout_constraintStart_toEndOf="@+id/txtd_precioMedicina"
+            app:layout_constraintTop_toTopOf="parent" android:id="@+id/btn_addSeleccionado"
+            android:backgroundTint="#FDFCFC"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

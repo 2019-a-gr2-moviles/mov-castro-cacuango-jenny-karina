@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">FarmAzul</string>
+    <string name="verMenu">Catálogo de Medicinas</string>
+    <string name="soyAdministrador">Administrar Farmacia</string>
+    <string name="txtNombre">Medicamento</string>
+    <string name="txtPrecio">Precio</string>
+    <string name="txtDescripcion">Tipo</string>
+
+    <string name="txtNomPaciente">Nombre</string>
+    <string name="txtApePaciente">Apellido</string>
+    <string name="txtci">Identificación</string>
+    <string name="txt_Paciente">Datos del Paciente</string>
+
+
+    <string name="txtAdminPlatos">Registrar Medicamento</string>
+    <string name="txtAdminCombos">Gestionar Receta</string>
+    <string name="txtNuevoPlato">Agregar Medicina</string>
+    <string name="txtNuevoCombo">Añadir Receta</string>
+    <string name="txtPlatosDisponibles">Medicamentos en Stock</string>
+    <string name="txtPlatosSeleccionados">Medicamentos Añadidos a la Receta</string>
+</resources>
